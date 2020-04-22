@@ -36,7 +36,10 @@ spec:
 {{- end }}
         envFrom:
 {{ toYaml .Values.envFrom | indent 10 }}
-        ports:
+        env:
+ - name: DB
+ value: {{ template "fullname" . }}-db
+ ports:
         - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
           httpGet:
