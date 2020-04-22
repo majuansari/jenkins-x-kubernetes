@@ -95,5 +95,5 @@ jxRequirements:
     #  kubernetes.io/ingress.class: nginx
 REPLACE_ME_APP_NAME-db:
  replicaSet:
- enabled: true
+ enabled: false
  
